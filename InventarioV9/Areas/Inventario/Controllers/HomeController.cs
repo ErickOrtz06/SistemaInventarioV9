@@ -1,10 +1,12 @@
 using System.Diagnostics;
-using InventarioV9.Models;
 using Microsoft.AspNetCore.Mvc;
+using SistemaInventario.Modelos.ViewModels;
 
-namespace InventarioV9.Controllers
+namespace InventarioV9.Areas.Inventario.Controllers
 {
-    public class HomeController : Controller
+    [Area("Inventario")]
+
+       public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
 
@@ -23,6 +25,8 @@ namespace InventarioV9.Controllers
             return View();
         }
 
+     
+          
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
